@@ -16,11 +16,15 @@ public class detonator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            pressDetonator();
+        }
     }
     void pressDetonator()
     {
-        detPress.SetTrigger("detonateTrigger");
         detPress.ResetTrigger("detonateTrigger");
+        detPress.SetTrigger("detonateTrigger");
+
     }
 }
