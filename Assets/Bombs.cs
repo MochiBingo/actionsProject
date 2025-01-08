@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class bombs : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject bomb;
     void Start()
     {
-        
+        Actions.detonate += explodeBomb;
+        Actions.interact += pickup;
     }
-
-    // Update is called once per frame
-    void Update()
+    void pickup()
     {
-        
+
+    }
+    void explodeBomb()
+    {
+        bomb.SetActive(false);
     }
 }

@@ -9,28 +9,30 @@ public class flashlight : MonoBehaviour
     public MeshRenderer lens;
     public Material lightOn;
     public Material lightOff;
-    
-    // Start is called before the first frame update
+
+    private bool isLightOn = false;
     void Start()
     {
         Actions.toggleFlashlight += ToggleLight;
+        Actions.interact += pickup;
     }
-
-    // Update is called once per frame
-    void Update()
+    void pickup()
     {
+
     }
     void ToggleLight()
     {
-            if (lens.material == lightOn)
-            {
-                lens.material = lightOff;
-                lightsource.SetActive(false);
-            }
-            else
+            if (isLightOn == false)
             {
                 lens.material = lightOn;
                 lightsource.SetActive(true);
+                isLightOn = true;
+            }
+            else if (isLightOn == true)
+            {
+                lens.material = lightOff;
+                lightsource.SetActive(false);
+                isLightOn = false;
             }
     }
 }
