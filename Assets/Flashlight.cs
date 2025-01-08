@@ -14,11 +14,6 @@ public class flashlight : MonoBehaviour
     void Start()
     {
         Actions.toggleFlashlight += ToggleLight;
-        Actions.interact += pickup;
-    }
-    void pickup()
-    {
-
     }
     void ToggleLight()
     {

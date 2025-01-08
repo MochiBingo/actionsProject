@@ -6,17 +6,9 @@ using UnityEngine;
 public class detonator : MonoBehaviour
 {
     public Animator detPress;
-    // Start is called before the first frame update
     void Start()
     {
         Actions.detonate += pressDetonator;
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
     void pressDetonator()
     {

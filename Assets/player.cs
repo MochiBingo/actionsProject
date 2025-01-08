@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    private bool itemsEquipped = false;
+    public GameObject flashText;
+    public GameObject detText;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
@@ -19,11 +15,17 @@ public class player : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            Actions.detonate?.Invoke();
+            if (itemsEquipped == true)
+            {
+                Actions.detonate?.Invoke();
+            }
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
             Actions.interact?.Invoke();
+            itemsEquipped = true;
+            detText.SetActive(true);
+            flashText.SetActive(true);
         }
     }
 }
