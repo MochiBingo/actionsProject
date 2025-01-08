@@ -9,12 +9,14 @@ public class player : MonoBehaviour
     public GameObject detText;
     void Update()
     {
+        //key inputs to invoke actions
         if (Input.GetKeyDown(KeyCode.F))
         {
             Actions.toggleFlashlight?.Invoke();
         }
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
+            //it can only detonate if you're holding the detonator
             if (itemsEquipped == true)
             {
                 Actions.detonate?.Invoke();

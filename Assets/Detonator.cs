@@ -12,6 +12,7 @@ public class detonator : MonoBehaviour
     }
     void pressDetonator()
     {
+        //it resets the animation trigger so the animation can play
         detPress.ResetTrigger("detonateTrigger");
         detPress.SetTrigger("detonateTrigger");
 

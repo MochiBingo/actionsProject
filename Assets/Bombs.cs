@@ -10,6 +10,7 @@ public class bombs : MonoBehaviour
     }
     void explodeBomb()
     {
+        //turns off the bomb object
         gameObject.SetActive(false);
     }
 }

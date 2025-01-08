@@ -14,6 +14,7 @@ public class DummyObjects : MonoBehaviour
     }
     void pickup()
     {
+        //turns off the dummy objects and turns on the main objects
         dummyFlash.SetActive(false);
         mainFlash.SetActive(true);
         dummyDet.SetActive(false);

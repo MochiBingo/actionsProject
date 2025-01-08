@@ -17,12 +17,14 @@ public class flashlight : MonoBehaviour
     }
     void ToggleLight()
     {
+        //on toggle, if the light is off it turns it on, turning on the light and switching the material
             if (isLightOn == false)
             {
                 lens.material = lightOn;
                 lightsource.SetActive(true);
                 isLightOn = true;
             }
+        //if the light is on it turns it off
             else if (isLightOn == true)
             {
                 lens.material = lightOff;

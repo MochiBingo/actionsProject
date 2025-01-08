@@ -13,6 +13,7 @@ public class Targetscript : MonoBehaviour
     }
     void destoyTarget()
     {
+        //turn off the intact target and turn on the destroyed target
         target.SetActive(false);
         brokenTarget.SetActive(true);
     }
