@@ -21,5 +21,9 @@ public class player : MonoBehaviour
         {
             Actions.detonate?.Invoke();
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Actions.interact?.Invoke();
+        }
     }
 }
